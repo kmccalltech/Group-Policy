@@ -16,17 +16,17 @@ This tutorial outlines the implementation of Group Policy Objects in Active Dire
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<p><img width="750" alt="Screenshot 2025-01-10 at 2 37 28 PM" src="https://github.com/user-attachments/assets/6b91dcf1-d538-45ed-8862-b4623ac2d73b" /></p>
+<p><img width="750" alt="Screenshot" src="https://github.com/user-attachments/assets/6b91dcf1-d538-45ed-8862-b4623ac2d73b" /></p>
 <p>Log into dc-1 as ken_admin, Go to Start -> Run -> gpmc.msc</p>
 <p>Edit the Default Domain Policy</p>
 
 <table>
   <tr>
     <td>
-      <img width="785" alt="Screenshot 2025-01-10 at 2 38 09 PM" src="https://github.com/user-attachments/assets/98c530c2-676b-4692-b21a-9bd889c52872" />
+      <img width="785" alt="Screenshot" src="https://github.com/user-attachments/assets/98c530c2-676b-4692-b21a-9bd889c52872" />
     </td>
     <td>
-      <img width="1204" alt="Screenshot 2025-01-10 at 2 38 33 PM" src="https://github.com/user-attachments/assets/33776f27-1b7e-4420-983d-498cc1867857" />
+      <img width="1204" alt="Screenshot" src="https://github.com/user-attachments/assets/33776f27-1b7e-4420-983d-498cc1867857" />
     </td>
   </tr>
 </table>
@@ -36,23 +36,23 @@ This tutorial outlines the implementation of Group Policy Objects in Active Dire
 <table>
   <tr>
     <td>
-      <img width="855" alt="Screenshot 2025-01-10 at 2 45 52 PM" src="https://github.com/user-attachments/assets/20b08275-5241-49f8-b9e9-223f32dfe167" />
+      <img width="855" alt="Screenshot" src="https://github.com/user-attachments/assets/20b08275-5241-49f8-b9e9-223f32dfe167" />
     </td>
     <td>
-      <img width="252" alt="Screenshot 2025-01-10 at 2 47 30 PM" src="https://github.com/user-attachments/assets/419568a0-17f4-4216-adbc-1f95cb5a6161" />
+      <img width="252" alt="Screenshot" src="https://github.com/user-attachments/assets/419568a0-17f4-4216-adbc-1f95cb5a6161" />
     </td>
   </tr>
 </table>
-<p>Log into Client-1 as Jane.Admin and employ the Group Policy Object (GPO) enter gpupdate /force into PowerShell. Make sure to open PowerShell as administrator. Then log out.</p>
+<p>Log into client-1 as ken_admin and employ the Group Policy Object (GPO) enter gpupdate /force into PowerShell. Make sure to open PowerShell as administrator. Then log out.</p>
 <p>Once updated, try logging into client-1 as any one of the users within the domain but put in the wrong password 6 times. A lockout message should appear.</p>
 <br>
 
-<p><img width="756" alt="Screenshot 2025-01-10 at 2 49 33 PM" src="https://github.com/user-attachments/assets/d84db84b-7aa8-46d8-88e8-970195dee9d7" /></p>
+<p><img width="756" alt="Screenshot" src="https://github.com/user-attachments/assets/d84db84b-7aa8-46d8-88e8-970195dee9d7" /></p>
 <p>Back in dc-1, oepn Active Directory Users & Computers, in _EMPLOYEES find the user that we locked out (bod.wex) in this case and unlock their account.</p>
 
 <br>
 
-<p><img width="753" alt="Screenshot 2025-01-10 at 2 52 44 PM" src="https://github.com/user-attachments/assets/700057df-de4f-46c6-82cb-9fc498f8c585" />
+<p><img width="753" alt="Screenshot" src="https://github.com/user-attachments/assets/700057df-de4f-46c6-82cb-9fc498f8c585" />
 </p>
 <p>After the account is unlocked, try logging into Client-1 as that user. </p>
 <p>We can also easily reset a users password here by right clicking their name.</p>
@@ -60,11 +60,11 @@ This tutorial outlines the implementation of Group Policy Objects in Active Dire
 
 <h3>BONUS</h3>
 
-<img width="454" alt="Screenshot 2025-01-10 at 2 56 19 PM" src="https://github.com/user-attachments/assets/e7b28b81-6797-4d5f-8854-3275bb2bc8e2" />
+<img width="454" alt="Screenshot" src="https://github.com/user-attachments/assets/e7b28b81-6797-4d5f-8854-3275bb2bc8e2" />
 
-<p>Back in Client-1 as any user, go to Start and search for Event Viewer but open it as an administrator. We can use Jane.Admin here.</p>
+<p>Back in client-1 as any user, go to Start and search for Event Viewer but open it as an administrator. We can use ken_admin here.</p>
 <br>
-<p><img width="1330" alt="Screenshot 2025-01-10 at 2 58 22 PM" src="https://github.com/user-attachments/assets/5731fe4d-4f93-4d76-ac8e-acf30d68b2de" /></p>
+<p><img width="1330" alt="Screenshot" src="https://github.com/user-attachments/assets/5731fe4d-4f93-4d76-ac8e-acf30d68b2de" /></p>
 
 <p>Event Viewer allows us to view security logs. On the left hand side go to Windows Logs -> Security</p>
 <p>Right click on Security and click Find. Enter in the user name we were trying to log in as with the wrong password earlier. We can view the failed log in attempts we made.
