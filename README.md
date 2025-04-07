@@ -47,12 +47,12 @@ This is a continuation tutorial that outlines the implementation of Group Policy
 <p>Once updated, try logging into client-1 as any one of the users within the domain but put in the wrong password 6 times. A lockout message should appear.</p>
 <br>
 
-<p><img width="756" alt="Screenshot" src="https://imgur.com/a/eujMC18" /></p>
+<p><img width="756" alt="Screenshot" src="https://i.imgur.com/81sv2dd.png" /></p>
 <p>Back in dc-1, oepn Active Directory Users & Computers, in _EMPLOYEES find the user that we locked out (bufu.tec) in this case and unlock their account.</p>
 
 <br>
 
-<p><img width="753" alt="Screenshot" src="https://imgur.com/a/bRsuzjv" />
+<p><img width="753" alt="Screenshot" src="https://i.imgur.com/nDzNP4M.png" />
 </p>
 <p>After the account is unlocked, try logging into client-1 as that user. </p>
 <p>We can also easily reset a users password here by right clicking their name.</p>
