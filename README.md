@@ -36,7 +36,7 @@ This is a continuation tutorial that outlines the implementation of Group Policy
 <table>
   <tr>
     <td>
-      <img width="855" alt="Screenshot" src="https://github.com/user-attachments/assets/20b08275-5241-49f8-b9e9-223f32dfe167" />
+      <img width="855" alt="Screenshot" src="https://i.imgur.com/i1r3hic.png" />
     </td>
     <td>
       <img width="252" alt="Screenshot" src="https://github.com/user-attachments/assets/419568a0-17f4-4216-adbc-1f95cb5a6161" />
@@ -47,24 +47,24 @@ This is a continuation tutorial that outlines the implementation of Group Policy
 <p>Once updated, try logging into client-1 as any one of the users within the domain but put in the wrong password 6 times. A lockout message should appear.</p>
 <br>
 
-<p><img width="756" alt="Screenshot" src="https://github.com/user-attachments/assets/d84db84b-7aa8-46d8-88e8-970195dee9d7" /></p>
-<p>Back in dc-1, oepn Active Directory Users & Computers, in _EMPLOYEES find the user that we locked out (bod.wex) in this case and unlock their account.</p>
+<p><img width="756" alt="Screenshot" src="https://imgur.com/a/eujMC18" /></p>
+<p>Back in dc-1, oepn Active Directory Users & Computers, in _EMPLOYEES find the user that we locked out (bufu.tec) in this case and unlock their account.</p>
 
 <br>
 
-<p><img width="753" alt="Screenshot" src="https://github.com/user-attachments/assets/700057df-de4f-46c6-82cb-9fc498f8c585" />
+<p><img width="753" alt="Screenshot" src="https://imgur.com/a/bRsuzjv" />
 </p>
-<p>After the account is unlocked, try logging into Client-1 as that user. </p>
+<p>After the account is unlocked, try logging into client-1 as that user. </p>
 <p>We can also easily reset a users password here by right clicking their name.</p>
 <br>
 
 <h3>BONUS</h3>
 
-<img width="454" alt="Screenshot" src="https://github.com/user-attachments/assets/e7b28b81-6797-4d5f-8854-3275bb2bc8e2" />
+<img width="454" alt="Screenshot" src="https://i.imgur.com/PYfJ1nb.png" />
 
 <p>Back in client-1 as any user, go to Start and search for Event Viewer but open it as an administrator. We can use ken_admin here.</p>
 <br>
-<p><img width="1330" alt="Screenshot" src="https://github.com/user-attachments/assets/5731fe4d-4f93-4d76-ac8e-acf30d68b2de" /></p>
+<p><img width="1330" alt="Screenshot" src="https://i.imgur.com/B8MRgly.png" /></p>
 
 <p>Event Viewer allows us to view security logs. On the left hand side go to Windows Logs -> Security</p>
 <p>Right click on Security and click Find. Enter in the user name we were trying to log in as with the wrong password earlier. We can view the failed log in attempts we made.
