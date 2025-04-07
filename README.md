@@ -3,7 +3,7 @@
 </p>
 
 <h1>Active Directory Group Policy Objects</h1>
-This tutorial outlines the implementation of Group Policy Objects in Active Directory with a focus on Account Lockouts.<br />
+This is a continuation tutorial that outlines the implementation of Group Policy Objects in Active Directory with a focus on Account Lockouts. Im using the same VM's that I created in my previous lab with the sam configurations<br />
 
 <h2>Environments and Technologies Used</h2>
 
