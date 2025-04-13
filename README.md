@@ -3,7 +3,7 @@
 </p>
 
 <h1>Active Directory Group Policy Objects</h1>
-This is a continuation tutorial that outlines the implementation of Group Policy Objects in Active Directory with a focus on Account Lockouts. Im using the same VM's that I created in my previous lab with the sam configurations<br />
+This is a continuation tutorial that outlines the implementation of Group Policy Objects in Active Directory with a focus on Account Lockouts. I'm using the same VMs that I created in my previous lab with the same configurations<br />
 
 <h2>Environments and Technologies Used</h2>
 
@@ -31,7 +31,7 @@ This is a continuation tutorial that outlines the implementation of Group Policy
   </tr>
 </table>
 
-<p>Double click on Account Lockout Threshold and set the amount of log in attempts to 5. Click Apply.</p>
+<p>Double click on Account Lockout Threshold and set the number of login attempts to 5. Click Apply.</p>
 <br>
 <table>
   <tr>
@@ -43,29 +43,29 @@ This is a continuation tutorial that outlines the implementation of Group Policy
     </td>
   </tr>
 </table>
-<p>Log into client-1 as ken_admin and employ the Group Policy Object (GPO) enter gpupdate /force into PowerShell. Make sure to open PowerShell as administrator. Then log out.</p>
+<p>Log into client-1 as ken_admin and employ the Group Policy Object (GPO), enter gpupdate /force into PowerShell. Make sure to open PowerShell as an administrator. Then log out.</p>
 <p>Once updated, try logging into client-1 as any one of the users within the domain but put in the wrong password 6 times. A lockout message should appear.</p>
 <br>
 
 <p><img width="756" alt="Screenshot" src="https://i.imgur.com/81sv2dd.png" /></p>
-<p>Back in dc-1, oepn Active Directory Users & Computers, in _EMPLOYEES find the user that we locked out (bufu.tec) in this case and unlock their account.</p>
+<p>Back in dc-1, open Active Directory Users & Computers, in _EMPLOYEES, find the user that we locked out (bufu.tec) in this case and unlock their account.</p>
 
 <br>
 
 <p><img width="753" alt="Screenshot" src="https://i.imgur.com/nDzNP4M.png" />
 </p>
 <p>After the account is unlocked, try logging into client-1 as that user. </p>
-<p>We can also easily reset a users password here by right clicking their name.</p>
+<p>We can also easily reset a user's password here by right-clicking their name.</p>
 <br>
 
 <h3>BONUS</h3>
 
 <img width="454" alt="Screenshot" src="https://i.imgur.com/PYfJ1nb.png" />
 
-<p>Back in client-1 as any user, go to Start and search for Event Viewer but open it as an administrator. We can use ken_admin here.</p>
+<p>Back in client-1 as any user, go to Start and search for Event Viewer, but open it as an administrator. We can use ken_admin here.</p>
 <br>
 <p><img width="1330" alt="Screenshot" src="https://i.imgur.com/B8MRgly.png" /></p>
 
-<p>Event Viewer allows us to view security logs. On the left hand side go to Windows Logs -> Security</p>
-<p>Right click on Security and click Find. Enter in the user name we were trying to log in as with the wrong password earlier. We can view the failed log in attempts we made.
+<p>Event Viewer allows us to view security logs. On the left-hand side, go to Windows Logs -> Security</p>
+<p> Right-click on Security and click Find. Enter in the user name we were trying to log in as with the wrong password earlier. We can view the failed login attempts we made.
 </p>
